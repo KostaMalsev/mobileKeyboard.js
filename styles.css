@@ -229,7 +229,7 @@
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url('https://assets.codepen.io/3537853/SFProText-Light.woff2') format('woff2');
+  src: url('/SFProText-Light.woff2') format('woff2');
 }
 
 @font-face {
@@ -237,7 +237,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('https://assets.codepen.io/3537853/SFProText-Regular.woff2') format('woff2');
+  src: url('/SFProText-Regular.woff2') format('woff2');
 }
 
 
