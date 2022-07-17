@@ -1,3 +1,168 @@
+.keyboard
+  .screen.letter-screen.visible
+    .row.top
+      .key
+        .letter q
+      .key
+        .letter w
+      .key
+        .letter e
+      .key
+        .letter r
+      .key
+        .letter t
+      .key
+        .letter y
+      .key
+        .letter u
+      .key
+        .letter i
+      .key
+        .letter o
+      .key
+        .letter p
+    .row.middle
+      .key
+        .letter a
+      .key
+        .letter s
+      .key
+        .letter d
+      .key
+        .letter f
+      .key
+        .letter g
+      .key
+        .letter h
+      .key
+        .letter j
+      .key
+        .letter k
+      .key
+        .letter l
+    .row.bottom
+      .key.icon-key.shift.align-left
+        svg.icon(viewbox='0 0 83 71' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+          path(d='M28.8535 70.5075h24.359c2.483 0 4.387-.694 5.712-2.081 1.324-1.387 1.987-3.255 1.987-5.603v-17.655h16.076c1.443 0 2.647-.405 3.614-1.215.966-.81 1.449-1.881 1.449-3.214 0-.837-.19-1.581-.57-2.23-.38-.648-.889-1.308-1.527-1.978l-34.337-34.252c-.765-.784-1.519-1.36-2.263-1.728-.745-.368-1.518-.552-2.321-.552-.79 0-1.555.184-2.294.552-.739.368-1.508.944-2.304 1.728l-34.304 34.252c-.683.692-1.208 1.358-1.577 1.995-.369.638-.553 1.376-.553 2.213 0 1.333.491 2.404 1.473 3.214.983.81 2.179 1.215 3.589 1.215h16.077v17.655c0 2.348.665 4.216 1.994 5.603 1.33 1.387 3.237 2.081 5.72 2.081Zm.49-5.259c-.762 0-1.381-.236-1.859-.708-.478-.473-.716-1.09-.716-1.852v-21.431c0-.808-.416-1.212-1.246-1.212H7.6735c-.357 0-.535-.132-.535-.396 0-.168.089-.352.267-.553l32.564-32.407c.362-.372.716-.559 1.063-.559.337 0 .686.187 1.048.559l32.564 32.407c.211.201.316.385.316.553 0 .264-.183.396-.55.396h-17.867c-.831 0-1.246.404-1.246 1.212v21.431c0 .74-.247 1.351-.741 1.835s-1.11.725-1.85.725h-23.363Z')
+      .key
+        .letter z
+      .key
+        .letter x
+      .key
+        .letter c
+      .key
+        .letter v
+      .key
+        .letter b
+      .key
+        .letter n
+      .key
+        .letter m
+      .key.icon-key.backspace.align-right
+        svg.icon(viewbox='0 0 23 17' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+          path(d='M0.436149 9.55935C-0.148911 8.97429 -0.141844 8.01865 0.436149 7.44065L7.16672 0.710085C7.55889 0.317916 8.32572 0 8.88429 0H19.3789C21.3107 0 22.8768 1.56885 22.8768 3.5018V13.4982C22.8768 15.4322 21.2999 17 19.3789 17H8.88429C8.32787 17 7.55397 16.6772 7.16672 16.2899L0.436149 9.55935ZM15.0195 8.47769L17.8436 5.65356C18.1369 5.36025 18.1408 4.8815 17.8479 4.5886C17.553 4.29367 17.0782 4.29763 16.7829 4.5929L13.9588 7.41703L11.1347 4.5929C10.8414 4.29959 10.3626 4.29571 10.0697 4.5886C9.77478 4.88354 9.77875 5.35829 10.074 5.65356L12.8981 8.47769L10.074 11.3018C9.7807 11.5951 9.77683 12.0739 10.0697 12.3668C10.3647 12.6617 10.8394 12.6577 11.1347 12.3625L13.9588 9.53835L16.7829 12.3625C17.0763 12.6558 17.555 12.6597 17.8479 12.3668C18.1428 12.0718 18.1389 11.5971 17.8436 11.3018L15.0195 8.47769ZM2.08652 9.20972C1.69456 8.81775 1.69577 8.18104 2.08652 7.79028L8.02005 1.85675C8.21708 1.65972 8.60244 1.5 8.87055 1.5H19.374C20.4801 1.5 21.3768 2.39706 21.3768 3.50586V13.4941C21.3768 14.6019 20.4833 15.5 19.374 15.5H8.87055C8.59786 15.5 8.21745 15.3406 8.02005 15.1432L2.08652 9.20972Z' fill-rule='evenodd')
+  
+  .screen.char-screen
+    .row.top
+      .key
+        .letter 1
+      .key
+        .letter 2
+      .key
+        .letter 3
+      .key
+        .letter 4
+      .key
+        .letter 5
+      .key
+        .letter 6
+      .key
+        .letter 7
+      .key
+        .letter 8
+      .key
+        .letter 9
+      .key
+        .letter 0
+    .row.middle
+      .key
+        .letter ,
+      .key
+        .letter =
+      .key
+        .letter (
+      .key
+        .letter )
+      .key
+        .letter "
+      .key
+        .letter _
+      .key
+        .letter \
+      .key
+        .letter /
+      .key
+        .letter '
+      .key
+        .letter ;
+    .row.bottom
+      .key.icon-key.with-letter.switch-screen-additional.align-left
+        .letter #+=
+      .key
+        .letter -
+      .key
+        .letter {
+      .key
+        .letter }
+      .key
+        .letter :
+      .key
+        .letter &
+      .key
+        .letter |
+      .key
+        .letter [
+      .key
+        .letter ]
+      .key
+        .letter !
+      .key
+        .letter +
+      .key
+        .letter <
+      .key
+        .letter >
+      .key
+        .letter ?
+      .key
+        .letter *
+      .key
+        .letter `
+      .key.icon-key.backspace.align-right
+        svg.icon(viewbox='0 0 23 17' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+          path(d='M0.436149 9.55935C-0.148911 8.97429 -0.141844 8.01865 0.436149 7.44065L7.16672 0.710085C7.55889 0.317916 8.32572 0 8.88429 0H19.3789C21.3107 0 22.8768 1.56885 22.8768 3.5018V13.4982C22.8768 15.4322 21.2999 17 19.3789 17H8.88429C8.32787 17 7.55397 16.6772 7.16672 16.2899L0.436149 9.55935ZM15.0195 8.47769L17.8436 5.65356C18.1369 5.36025 18.1408 4.8815 17.8479 4.5886C17.553 4.29367 17.0782 4.29763 16.7829 4.5929L13.9588 7.41703L11.1347 4.5929C10.8414 4.29959 10.3626 4.29571 10.0697 4.5886C9.77478 4.88354 9.77875 5.35829 10.074 5.65356L12.8981 8.47769L10.074 11.3018C9.7807 11.5951 9.77683 12.0739 10.0697 12.3668C10.3647 12.6617 10.8394 12.6577 11.1347 12.3625L13.9588 9.53835L16.7829 12.3625C17.0763 12.6558 17.555 12.6597 17.8479 12.3668C18.1428 12.0718 18.1389 11.5971 17.8436 11.3018L15.0195 8.47769ZM2.08652 9.20972C1.69456 8.81775 1.69577 8.18104 2.08652 7.79028L8.02005 1.85675C8.21708 1.65972 8.60244 1.5 8.87055 1.5H19.374C20.4801 1.5 21.3768 2.39706 21.3768 3.50586V13.4941C21.3768 14.6019 20.4833 15.5 19.374 15.5H8.87055C8.59786 15.5 8.21745 15.3406 8.02005 15.1432L2.08652 9.20972Z' fill-rule='evenodd')
+          
+  .row.footer
+    .key.label-key.screen-switch
+      .letter 123
+    .key.label-key.space
+      .letter space
+    .key.label-key.return
+      .letter return
+      
+      
+<!-- <div spellcheck="false" autocorrect="off" autocapitalize="off" translate="no" contenteditable="plaintext-only" class="textarea" style="tab-size: 2" role="textbox" aria-multiline="true" aria-autocomplete="list" data-gramm="false" data-gramm_editor="false" data-enabled-grammarly="false">dsdsafdfsdsfdfsdfsdfsa</div> -->
+
+<textarea readonly="true" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" translate="no" contenteditable="false" class="textarea" style="tab-size: 2" aria-multiline="true" aria-autocomplete="list" data-gramm="false" data-gramm_editor="false" data-enabled-grammarly="false">hello</textarea>
+
+<link rel="stylesheet" href="https://codeit.codes/fonts/fonts.css">
+
+
+<body>
+
+
+<script>
+
 // . - most used everywhere (JS, CSS, HTML)
 
 // % - CSS sizes
@@ -243,5 +408,5 @@ function playClickSound() {
   
 }
 */
-
+</script>
 
