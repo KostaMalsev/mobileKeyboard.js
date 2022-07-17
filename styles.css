@@ -1,2 +1,271 @@
+.keyboard {
+  background: var(--keyboard-bg);
+  backdrop-filter: blur(70px);
+  padding: var(--key-row-margin) var(--keyboard-margin);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--key-row-margin);
+  font-family: 'SF Pro Text';
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: var(--text-color);
+  overflow: hidden;
+  transform: translateY(calc(100% + var(--sa-bottom)));
+  will-change: transform;
+  transition: transform .5s cubic-bezier(0.380, 0.700, 0.125, 1.000);
+  z-index: 1000;
+}
 
-
+.keyboard.visible {
+  transform: none;
+}
+
+.keyboard .screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--key-row-margin);
+  z-index: 0;
+}
+
+.keyboard .screen:not(.visible) {
+  display: none;
+}
+
+.keyboard .row {
+  position: relative;
+  display: flex;
+  gap: var(--key-margin);
+}
+
+.keyboard .row.top {
+  z-index: -2;
+}
+
+.keyboard .row.middle {
+  z-index: -1;
+}
+
+.keyboard .row.bottom {
+  position: static;
+}
+
+.keyboard .row.footer {
+  width: 100%;
+  z-index: 1;
+}
+
+.keyboard .key {
+  position: relative;
+  height: var(--key-height);
+  width: var(--letter-key-width);
+  background: var(--key-color-primary);
+  box-shadow: var(--key-shadow);
+  border-radius: var(--key-border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.keyboard .key.active {
+  filter: brightness(0.7);
+}
+
+.keyboard .key::before {
+  /* border: 1px solid rebeccapurple; */
+  content: '';
+  position: absolute;
+  top: calc(var(--key-row-margin) * -1);
+  right: calc(var(--key-margin) * -1);
+  left: calc(var(--key-margin) * -1);
+  bottom: calc(var(--key-row-margin) * -1);
+  z-index: -1;
+}
+
+.keyboard .row.middle .key:first-of-type::before {
+  left: calc(var(--key-height) * -1);
+}
+
+.keyboard .row.middle .key:last-of-type::before {
+  right: calc(var(--key-height) * -1);
+}
+
+.keyboard .key.active::before {
+  /* background: rebeccapurple; */
+}
+
+.keyboard .key .letter {
+  position: relative;
+  top: -1px;
+  top: -2px;
+}
+
+.keyboard .icon-key {
+  position: absolute;
+  width: var(--key-height);
+  background: var(--key-color-secondary);
+}
+
+.keyboard .icon-key.align-left {
+  left: var(--keyboard-margin);
+}
+
+.keyboard .icon-key.align-right {
+  right: var(--keyboard-margin);
+}
+
+.keyboard .icon-key .icon {
+  position: absolute;
+  height: var(--icon-height);
+}
+
+.keyboard .icon-key.with-letter .letter {
+  position: relative;
+  top: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.02em;
+}
+
+.keyboard .label-key {
+  background: var(--key-color-secondary);
+  flex: 1;
+}
+
+.keyboard .label-key .letter {
+  position: relative;
+  top: 0.5px;
+  top: -1px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.02em;
+}
+
+.keyboard .label-key.screen-switch .letter {
+  top: 0;
+}
+
+.keyboard .label-key.space {
+  /* width: calc(50% - 3px); */
+  width: var(--spacebar-width);
+  background: var(--key-color-primary);
+  flex: none;
+}
+
+
+
+:root {
+  --keyboard-bg: linear-gradient(0deg, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.82)), rgba(255, 255, 255, 0.4);
+  
+  --text-color: #FFFFFF;
+  
+  --key-color-primary: #646464;
+  --key-color-secondary: #3F3F3F;
+  
+  --key-border-radius: 5px;
+  --key-shadow: 0px 1px 0px rgb(0 0 0 / 30%);
+  
+  --key-height: 45px;
+  --icon-height: 17px;
+  
+  --letter-key-width: 35px;
+  --label-key-width: 97px;
+  --spacebar-width: 200px;
+  
+  --keyboard-margin: 4px;
+  --key-row-margin: 11px;
+  --key-margin: 6px;
+}
+
+
+.keyboard {
+  position: fixed;
+  bottom: var(--sa-bottom);
+  left: var(--sa-left);
+  width: calc(100vw - var(--sa-left));
+  width: 414px;
+}
+
+
+.textarea {
+  position: fixed;
+  width: calc(100vw - var(--sa-right));
+  height: calc(100vh - var(--sa-bottom));
+  background: transparent;
+  border: 0;
+  resize: none;
+  font-size: 16px;
+  outline: 0;
+  cursor: text;
+  tab-size: 2;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+  display: block;
+  overflow: auto;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  border-radius: 0;
+  font-family: 'Mono Sans', 'Roboto Mono', consolas, lucida console, courier new, monospace;
+  box-sizing: border-box;
+  white-space: pre;
+  word-wrap: normal;
+  padding: 10.5px 13.5px;
+  left: 0;
+  font-size: inherit;
+  z-index: 1;
+}
+
+
+/* SF Pro Text */
+
+@font-face {
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('https://assets.codepen.io/3537853/SFProText-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://assets.codepen.io/3537853/SFProText-Regular.woff2') format('woff2');
+}
+
+
+
+:root {
+  --sa-top: env(safe-area-inset-top, 0px);
+  --sa-bottom: env(safe-area-inset-bottom, 0px);
+  --sa-left: env(safe-area-inset-left, 0px);
+  --sa-right: env(safe-area-inset-right, 0px);
+}
+
+body {
+  margin: 0;
+}
+
+html, body {
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+  -webkit-font-feature-settings: "kern";
+  touch-action: manipulation;
+  overscroll-behavior: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: none;
+}
+
